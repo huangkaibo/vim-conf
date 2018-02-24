@@ -389,8 +389,8 @@ nnoremap <C-l> <C-w>l
 "将H映射为行首, L映射为行尾, J映射为文首, K映射为文尾
 nnoremap H ^
 nnoremap L $
-nnoremap J G
-nnoremap K gg
+" nnoremap J <C-f>
+" nnoremap K <C-b>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -471,8 +471,10 @@ nnoremap <esc><esc> :nohl<cr>
 " terryma/vim-smooth-scroll 平滑滚动插件
 noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
 noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
-noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
-noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
+" noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
+" noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
+noremap <silent> K :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
+noremap <silent> J :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
