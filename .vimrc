@@ -286,7 +286,7 @@ nnoremap <C-s-tab> :bp<CR>
 
 "tagbar插件
 "打开tagbar的快捷键
-nmap <F8> :TagbarToggle<CR>
+" nmap <F8> :TagbarToggle<CR>
 
 "自动打开tagbar
 autocmd vimenter * TagbarToggle
