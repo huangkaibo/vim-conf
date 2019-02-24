@@ -1,103 +1,75 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" 插件管理脚本 地址是https://github.com/VundleVim/Vundle.vim
-" 以下是其配置文件
-
-set nocompatible " be iMproved, required
-filetype off " required
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-" let Vundle manage Vundle, required
-
-"Vundle脚本
-Plugin 'VundleVim/Vundle.vim'
+" vim-plug插件管理器 
+call plug#begin('~/.vim/plugged')  
 
 "两个编辑区主题
-Plugin 'tomasr/molokai'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'jnurmine/Zenburn'
+Plug 'tomasr/molokai'
+Plug 'altercation/vim-colors-solarized'
+Plug 'jnurmine/Zenburn'
 
 "ultisnips的插件, 输入for<tab>等自动补全的
 "Track the engine.
-Plugin 'SirVer/ultisnips'
+Plug 'SirVer/ultisnips'
 "Snippets are separated from the engine. Add this if you want them:
-Plugin 'honza/vim-snippets'
+Plug 'honza/vim-snippets'
 
 "下方状态栏
-Plugin 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline'
 
 "状态栏配套主题
-Plugin 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline-themes'
 
 "代码变量/函数等的一栏框
 "F8激活
-Plugin 'majutsushi/tagbar'
+Plug 'majutsushi/tagbar'
 
 "文件列表栏
 "ctrl+n激活
-Plugin 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree'
 
 "ctrl+P搜索项目文件夹内的其他文件
-Plugin 'kien/ctrlp.vim'
+Plug 'kien/ctrlp.vim'
 
 "task list插件 #TODO这种
 "ctrl+t调用
-Plugin 'vim-scripts/TaskList.vim'
+Plug 'vim-scripts/TaskList.vim'
 
 "移动跳转插件
 ",,w ,,b ,,s ,,hjkl进行快速跳转
-Plugin 'easymotion/vim-easymotion'
+Plug 'easymotion/vim-easymotion'
 
-"Plugin 'Valloric/YouCompleteMe'
+"Plug 'Valloric/YouCompleteMe'
 
 "搜索buffer的插件
-Plugin 'vim-scripts/L9'
-Plugin 'vim-scripts/FuzzyFinder'
+Plug 'vim-scripts/L9'
+Plug 'vim-scripts/FuzzyFinder'
 
 "自动补全
 "无需配置
-" Plugin 'vim-scripts/AutoComplPop'
-" Plugin 'vim-scripts/OmniCppComplete'
+" Plug 'vim-scripts/AutoComplPop'
+" Plug 'vim-scripts/OmniCppComplete'
 
 "快速注释
 "gcc注释当前行
 "可视模式后gc批量注释
 "gcu取消上次注释
-Plugin 'tpope/vim-commentary'
+Plug 'tpope/vim-commentary'
 
 "gdb插件
-" Plugin 'vim-scripts/vimgdb'
-Plugin 'vim-scripts/gdbmgr'
+" Plug 'vim-scripts/vimgdb'
+Plug 'vim-scripts/gdbmgr'
 
 "缩进竖线条
-Plugin 'Yggdroot/indentLine'
+Plug 'Yggdroot/indentLine'
 
 " 彩虹括号
-Plugin 'kien/rainbow_parentheses.vim'
+Plug 'kien/rainbow_parentheses.vim'
 
 " ctrl+udbf 平滑滚动插件
-Plugin 'terryma/vim-smooth-scroll'
+Plug 'terryma/vim-smooth-scroll'
 
-" All of your Plugins must be added before the following line
-call vundle#end() " required
-
-filetype plugin indent on " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList - lists configured plugins
-" :PluginInstall - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
+call plug#end()  
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -485,7 +457,7 @@ let g:ycm_server_python_interpreter='/usr/bin/python2.7'
 " .ycm_extra_conf.py的位置
 let g:ycm_global_ycm_extra_conf='/root/.ycm_extra_conf.py'
 " 设置YCM安装在哪里了
-set runtimepath+=/root/.vim/bundle/YouCompleteMe
+set runtimepath+=/root/.vim/plugged/YouCompleteMe
 
 " 跳转到定义Definition
 " nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
