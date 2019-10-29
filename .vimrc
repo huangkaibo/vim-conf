@@ -379,8 +379,8 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " F10 粘贴模式 F11 取消粘贴模式
-:map <F10> :set paste<CR>
-:map <F11> :set nopaste<CR>
+:map <F10> :set paste<CR> :set norelativenumber<CR> :set nonumber<CR>
+:map <F11> :set nopaste<CR> :set relativenumber<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
