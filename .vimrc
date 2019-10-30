@@ -248,6 +248,16 @@ let g:airline#extensions#tabline#enabled = 1
 "让vim可以显示色彩
 set t_Co=256
 
+"字符乱码
+let g:airline_left_sep = '⮀' 
+let g:airline_left_alt_sep = '⮁' 
+let g:airline_right_sep = '⮂' 
+let g:airline_right_alt_sep = '⮃'
+"下面三个不一定能用
+"let g:airline_symbols.branch = '⭠'
+"let g:airline_symbols.readonly = '⭤'
+"let g:airline_symbols.linenr = '⭡'
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "设置切换vim buffer的快捷键
